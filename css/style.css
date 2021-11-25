@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar  */
+
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 60;
+}
+
+#navbar .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar .nav-logo h1 {
+    color: white;
+}
+
+#navbar .nav-container .nav-link ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar .nav-container .nav-link ul li {
+    padding: 20px;
+}
+
+#navbar .nav-container .nav-link ul li a {
+    color: white;
+}
+
+#navbar .nav-container .nav-link ul li:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+#navbar .nav-container .nav-link ul li:hover a {
+    color: inherit;
+}
+
+
+#navbar .nav-btn .menu-btn {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    /* border: 1px solid white; */
+}
+
+#navbar .nav-btn .menu-btn .menu-btn__burger {
+    height: 3px;
+    width: 30px;
+    background: #fff;
+    border-radius: 20%;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .6);
+}
+
+#navbar .nav-btn .menu-btn .menu-btn__burger::before,
+#navbar .nav-btn .menu-btn .menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background: #fff;
+    border-radius: 20%;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .6);
+}
+
+#navbar .nav-btn .menu-btn .menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+#navbar .nav-btn .menu-btn .menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+#navbar .menu-btn.open .menu-btn__burger {
+    transform: translateX(-20px);
+    box-shadow: none;
+    background: transparent;
+}
+
+#navbar .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(15px, -15px);
+}
+
+#navbar .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(15px, 15px);
+}
+
+
+
+/* Home section */
+
+#home {
+    width: 100%;
+    height: 740px;
+    background-color: rgba(0, 0, 0, .7);
+    box-sizing: border-box;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 800px;
+    width: 100%;
+    background: url('../img/img2.jpeg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: .8;
+}
+
+#home .nav-container .name {
+    position: relative;
+    float: right;
+    top: 300px;
+    right: 200px;
+}
+
+#home .nav-container .name h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Work section */
+
+#work {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+.nav-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.nav-name h1 {
+    font-family: century;
+    font-size: 3rem;
+    margin: 50px;
+}
+
+#work .nav-container .gallery{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#work .nav-container .gallery img {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+/* Skill section */
+
+#skill {
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    padding-bottom: 50px;
+}
+
+#skill .nav-container  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#skill .nav-container .box {
+    width: 400px;
+    height: 450px;
+    background-color: rgba(160, 153, 153, 0.7);
+    margin: 30px;
+}
+
+#skill .nav-container .box .skill-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+#skill .nav-container .box .tehnical-skill .type h3 {
+    position: relative;
+    display: inline-block;
+    left: 50px;
+    padding: 5%;
+}
+
+#skill .nav-container .box .tehnical-skill .type .procent {
+    position: relative;
+    float: right;
+    top: -50px;
+    right: 50px;
+}
+
+#skill .nav-container .box .tehnical-skill .type .line1 {
+    position: relative;
+    width: 300px;
+    height: 3px;
+    background-color: white;
+    left: 60px;
+    top: -20px;
+}
+
+#skill .nav-container .box .tehnical-skill .type .line1::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: goldenrod;
+    width: 60%;
+    height: 3px;
+}
+
+#skill .nav-container .box .tehnical-skill .type .line2 {
+    position: relative;
+    width: 300px;
+    height: 3px;
+    background-color: white;
+    left: 60px;
+    top: -20px;
+}
+
+#skill .nav-container .box .tehnical-skill .type .line2::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: goldenrod;
+    width: 45%;
+    height: 3px;
+}
+
+#skill .nav-container .box .tehnical-skill .type .line3 {
+    position: relative;
+    width: 300px;
+    height: 3px;
+    background-color: white;
+    left: 60px;
+    top: -20px;
+}
+
+#skill .nav-container .box .tehnical-skill .type .line3::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: goldenrod;
+    width: 7%;
+    height: 3px;
+}
+
+#skill .nav-container .box .professional-skill {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#skill .nav-container .box .professional-skill .graphic {
+    width: 130px;
+    height: 130px;
+    
+    margin: 10px;
+}
+
+svg {
+    transform: translate(-52px, -137px) rotate(-90deg);
+
+}
+
+svg circle {
+    fill: none;
+    stroke-width: 10;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+}
+
+.first circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    
+}
+
+.first circle:nth-child(2) {
+    stroke-dashoffset: calc(220 - (220 * 80) / 100);
+    stroke: #03a9f4;
+}
+
+.second circle:nth-child(1) {
+    stroke-dashoffset: 0;
+   
+}
+
+.second circle:nth-child(2) {
+    stroke-dashoffset: calc(220 - (220 * 70) / 100);
+    stroke: #03a9f4;
+}
+
+
+.third circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    
+}
+
+.third circle:nth-child(2) {
+    stroke-dashoffset: calc(220 - (220 * 99) / 100);
+    stroke: #03a9f4;
+}
+
+.forth circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    
+}
+
+.forth circle:nth-child(2) {
+    stroke-dashoffset: calc(220 - (220 * 90) / 100);
+    stroke: #03a9f4;
+}
+
+
+#skill .nav-container .box .professional-skill .graphic .name {
+    position: relative;
+    top: -50px;
+}
+
+#skill .nav-container .box .professional-skill .graphic .procent {
+    position: relative;
+    top: -135px;
+    left: 50px;
+}
+
+
+/* Service section */
+
+#service {
+    height: auto;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+#service .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#service .nav-container .box {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 20px;
+    background: linear-gradient(to top, rgb(59, 58, 58) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+
+#service .nav-container .box:hover {
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(32, 32, 32);
+}
+
+#service .nav-container .box .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#service .nav-container .box .name h2 {
+    font-family: century;
+    font-size: 2.5rem;
+    text-align: center;
+    /* margin: 40px 0px; */
+}
+
+#service .nav-container .box .text {
+    text-align: justify;
+    padding-top: 30px;
+}
+
+#service .nav-container .box .text p {
+    padding: 30px;
+}
+
+/* About Section */
+
+#about {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+#about .nav-name {
+    display: flex;
+    flex-direction: column;
+}
+
+#about .nav-name .line {
+    position: relative;
+    top: -40px;
+    width: 160px;
+    height: 3px;
+    background: white;
+    box-shadow: 5px 5px 15px 5px #000000;}
+
+#about .nav-container .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#about .nav-container .image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+#about .nav-container .text {
+    text-align: justify;
+    padding: 50px 100px;
+}
+
+#about .nav-container .text p{
+    font-family: century;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+/* Contact section */
+
+#contact {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    color: black
+}
+
+#contact .nav-container .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#contact .nav-container .form .input {
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+}
+
+#contact .nav-container .form #msg {
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+}
+
+#contact .nav-container .form #send {
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+}
+
+#contact .nav-container .form #send {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+@media screen and (max-width: 1000px) {
+
+    #navbar .nav-container {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #navbar .nav-btn {
+        position: absolute;
+        top: 6px;
+        right: 150px;
+    }
+
+    #navbar .nav-container .nav-link {
+        display: none;
+    }
+
+    #navbar .nav-container .nav-logo {
+        padding: 20px;
+        position: relative;
+        right: 150px;
+    }
+
+    #navbar .nav-btn .menu-btn {
+        display: flex;
+    }
+
+    #navbar .nav-container .nav-link.responsive {
+        background-color: rgba(0, 0, 0, .7);
+        position: absolute;
+        width: 50%;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    #navbar .nav-container .nav-link.responsive ul {
+        
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
